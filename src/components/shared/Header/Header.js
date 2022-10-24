@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-navbar-color  border-b border-slate-800 shadow-md px-5  lg:px-28 py-5 ">
+        <div className="navbar bg-black  border-b border-slate-800 shadow-md px-5  lg:px-28 py-5 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">
@@ -13,25 +13,29 @@ const Header = () => {
                         <NavLink
                             to="/home"
                             className={({ isActive }) =>
-                                isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
+                                isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                             }
                         >Home</NavLink>
 
-                        <NavLink to='/statistics' className={({ isActive }) =>
-                            isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
-                        } >Statistics</NavLink>
+                        <NavLink to='/courses' className={({ isActive }) =>
+                            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+                        } >Courses</NavLink>
 
                         <NavLink to='/blog' className={({ isActive }) =>
-                            isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
+                            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                         }>Blog</NavLink>
+
+                        <NavLink to='/faq' className={({ isActive }) =>
+                            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+                        }>FAQ</NavLink>
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-3xl  lg:text-4xl text-blue-color font-bold ">
-                    tasan quiz app</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-3xl  lg:text-4xl text-green-500 font-bold ">
+                    edu-Cate</Link>
             </div>
             <div className=" navbar-center hidden lg:flex h-16 w-16 ">
                 {/*  <FontAwesomeIcon icon={faBurger} /> */}
-                <img src={logo} alt="" />
+                <img src='' alt="" />
 
             </div>
             <div className="navbar-end hidden lg:flex">
@@ -39,17 +43,21 @@ const Header = () => {
                     <NavLink
                         to="/home"
                         className={({ isActive }) =>
-                            isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
+                            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                         }
                     >Home</NavLink>
 
-                    <NavLink to='/statistics' className={({ isActive }) =>
-                        isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
-                    } >Statistics</NavLink>
+                    <NavLink to='/courses' className={({ isActive }) =>
+                        isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+                    } >Courses</NavLink>
 
                     <NavLink to='/blog' className={({ isActive }) =>
-                        isActive ? 'text-blue-color border-b-2 border-logo-color' : undefined
+                        isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                     }>Blog</NavLink>
+
+                    <NavLink to='/faq' className={({ isActive }) =>
+                        isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+                    }>FAQ</NavLink>
                 </ul>
             </div>
         </div>
