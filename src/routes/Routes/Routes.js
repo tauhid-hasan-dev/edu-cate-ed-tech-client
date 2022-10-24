@@ -4,6 +4,8 @@ import CourseContent from "../../components/CourseContent/CourseContent";
 import Courses from "../../components/Courses/Courses";
 import Faq from "../../components/Faq/Faq";
 import Home from "../../components/Home/Home";
+import Login from "../../components/Login/Login/Login";
+import Register from "../../components/Login/Register/Register";
 import Main from "../../layouts/Main/Main";
 
 
@@ -33,6 +35,14 @@ export const router = createBrowserRouter([
             {
                 path: '/faq',
                 element: <Faq></Faq>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }

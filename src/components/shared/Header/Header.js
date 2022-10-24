@@ -59,6 +59,7 @@ const Header = () => {
                         isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                     }>FAQ</NavLink>
                 </ul>
+                <Link to='/login' className='pl-7'><button className="btn btn- btn-success">Login</button></Link>
             </div>
         </div>
     );
