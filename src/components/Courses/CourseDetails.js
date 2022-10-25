@@ -59,7 +59,6 @@ const CourseDetails = () => {
                 </div>
                 <Link to={`/checkout/${id}`} className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success font-semibold">Get premium access</button></Link>
             </div>
-
         </div>
     );
 };

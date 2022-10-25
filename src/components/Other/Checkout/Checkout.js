@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 const Checkout = () => {
     const courseInfo = useLoaderData();
@@ -8,9 +7,7 @@ const Checkout = () => {
 
     return (
         <div>
-
             <div className='flex justify-center'>
-
                 <div className='px-5 lg:px-20  py-10  flex flex-col items-center '>
                     <p className='text-2xl pb-5'>Checkout for <span className='text-green-600 text-3xl font-bold'>{title}</span> course</p>
                     <form className="p-7 lg:p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
