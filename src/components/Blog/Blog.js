@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaArrowDown } from 'react-icons/fa';
+
 
 const Blog = () => {
     return (
-        <div>
+        <div className='bg-gray-700'>
             <div className='px-5 lg:px-28 py-10'>
                 <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
