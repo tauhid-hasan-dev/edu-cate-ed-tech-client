@@ -1,4 +1,4 @@
-# edu-Cate ##(its a ed-Tech web app and a single page application)
+# edu-Cate (A ed-tech single page web app)
 
 ### Live website : https://learning-platform-client-d552c.web.app/
 
