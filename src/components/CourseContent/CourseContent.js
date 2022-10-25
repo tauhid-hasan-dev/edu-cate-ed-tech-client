@@ -6,10 +6,12 @@ const CourseContent = () => {
     const courses = useLoaderData();
     console.log(courses);
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-5 '>
+
             {
                 courses.map(course => <CourseCard course={course} key={course.id}></CourseCard>)
             }
+
         </div>
     );
 };
