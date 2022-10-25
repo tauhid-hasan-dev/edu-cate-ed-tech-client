@@ -1,4 +1,4 @@
-# edu-Cate(its a ed-Tech web app and a single page application)
+# edu-Cate ##(its a ed-Tech web app and a single page application)
 
 ### Live website : https://learning-platform-client-d552c.web.app/
 
@@ -11,4 +11,4 @@
 * Private routing applied for the checkout page when user is not logged in.
 * Tailwind css and Daisy Ui used for styling and the web app is fully responsive.
 * React Icon package used for icons.
-*
+
