@@ -4,18 +4,18 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
-        <div className='px-5 lg:px-20  py-10  flex flex-col items-center '>
-            <form className="p-7 lg:p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
+        <div className='px-5 lg:px-20  py-10  flex flex-col items-center bg-gray-800 text-slate-300'>
+            <form className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Login with your site account</p>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-slate-300">Email</span>
                     </label>
                     <input type="email" name='email' placeholder="email" className="input input-bordered " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-slate-300">Password</span>
                     </label>
                     <input type="password" name='password' placeholder="password" className="input input-bordered" required />
 

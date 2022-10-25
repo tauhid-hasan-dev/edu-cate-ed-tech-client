@@ -8,6 +8,8 @@ import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login/Login";
 import Register from "../../components/Login/Register/Register";
 import Checkout from "../../components/Other/Checkout/Checkout";
+import ErrorElement from "../../components/Other/ErrorElement/ErrorElement";
+import NotFound from "../../components/Other/NotFound/NotFound";
 import Terms from "../../components/Other/Terms/Terms";
 import Main from "../../layouts/Main/Main";
 
@@ -28,15 +30,18 @@ export const router = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
+                errorElement: <ErrorElement></ErrorElement>,
                 children: [
                     {
                         path: '/courses/',
                         element: <CourseContent></CourseContent>,
+                        /* errorElement: <ErrorElement></ErrorElement>, */
                         loader: () => fetch('https://b610-lerning-platform-server-side.vercel.app/courses')
                     },
                     {
                         path: '/courses/:id',
                         element: <CourseDetails></CourseDetails>,
+                        /*  errorElement: <ErrorElement></ErrorElement>, */
                         loader: ({ params }) =>
                             fetch(`https://b610-lerning-platform-server-side.vercel.app/courses/${params.id}`),
                     }
@@ -69,7 +74,8 @@ export const router = createBrowserRouter([
                     fetch(`https://b610-lerning-platform-server-side.vercel.app/courses/${params.id}`),
             }
         ]
-    }
+    },
+    { path: '*', element: <NotFound></NotFound> }
 ])
 
 

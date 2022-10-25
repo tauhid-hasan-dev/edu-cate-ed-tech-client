@@ -4,30 +4,30 @@ import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
-        <div className='px-5 lg:px-20  py-10  flex flex-col items-center '>
-            <form className="p-7 lg:p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
+        <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300 bg-gray-800'>
+            <form className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Register</p>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Full Name</span>
+                        <span className="label-text text-slate-300">Full Name</span>
                     </label>
                     <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Photo Url</span>
+                        <span className="label-text text-slate-300">Photo Url</span>
                     </label>
                     <input type="text" name='photourl' placeholder="Your Photo Url" className="input input-bordered " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-slate-300">Email</span>
                     </label>
                     <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-slate-300">Password</span>
                     </label>
                     <input type="password" name='password' placeholder="password" className="input input-bordered" required />
 
