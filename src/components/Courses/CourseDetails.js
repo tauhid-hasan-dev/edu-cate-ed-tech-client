@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
     const singleCourse = useLoaderData();
-    const { title, id, total_student, price, instructor, thumbnail_url, rating, image_url } = singleCourse;
+    const { title, id, total_student, price, instructor, thumbnail_url, rating, image_url, details } = singleCourse;
     console.log(singleCourse);
 
     return (
@@ -26,23 +26,10 @@ const CourseDetails = () => {
                             <p className='text-slate-200'>{instructor.name}</p>
                         </div>
                     </div>
-                    {/* <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
-                        <div className='flex flex-col text-start gap-1'>
-                            <div className='flex gap-1 text-slate-400 text-lg'>
-                                <FaStar></FaStar>
-                                <FaStar></FaStar>
-                                <FaStar></FaStar>
-                                <FaStar></FaStar>
-                                <FaStarHalfAlt></FaStarHalfAlt>
-                            </div>
-                            <p className='text-slate-200'>Review: {rating.number}</p>
-                        </div>
-                    </div> */}
                     <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
                         <div className='flex flex-col text-start'>
                             <p className=' text-slate-500'>Review</p>
                             <div className='flex items-center gap-2'>
-
                                 <p className='text-slate-200'>{rating.number}</p>
                             </div>
 
@@ -59,23 +46,12 @@ const CourseDetails = () => {
                     <p>{price}</p>
                 </div>
             </button>
-            <figure><img className='w-[100%]' src={image_url} alt="Shoes" /></figure>
-            <div className='flex flex-col items-center'>
-                <img className='mt-5 mb-2 w-16 h-16 text-center rounded-full border-4 border-white ' src='' alt="" />
-                <p className='text-slate-500'></p>
+            <img className='w-[100%]' src={image_url} alt="Shoes" />
+            <div className="card-body items-center text-start mb-3 text-white">
+                <p className='text-2xl'>Course Description</p>
+                <p className='text-md'>{details}</p>
             </div>
-            <div className="card-body items-center text-center mb-3">
-                <div className='text-green-400 text-xl font-semibold'>
-                    <p></p>
-                </div>
-            </div>
-            <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
-                <div className='text-slate-300 font-semibold flex justify-center items-center gap-2'>
 
-                    <p className='text-md'></p>
-                </div>
-
-            </button>
         </div>
     );
 };
