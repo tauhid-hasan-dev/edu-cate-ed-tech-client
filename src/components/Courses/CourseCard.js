@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowAltCircleRight, FaArrowRight, FaUsers } from 'react-icons/fa';
+import { FaArrowRight, FaUsers } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
