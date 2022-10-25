@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import CourseList from './CourseList';
 
 const SideNav = () => {
-
     const [courseData, setCourseData] = useState([]);
-    console.log(courseData)
 
     useEffect(() => {
         fetch('https://b610-lerning-platform-server-side.vercel.app/courses')
@@ -14,7 +13,7 @@ const SideNav = () => {
     return (
         <div className='flex gap-3 flex-col'>
             {
-                courseData.map(course => <CourseList key={course.id} course={course}></CourseList>)
+                courseData.map((course, idx) => <CourseList key={idx} course={course}></CourseList>)
             }
         </div>
     );
