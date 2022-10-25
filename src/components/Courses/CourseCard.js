@@ -23,9 +23,6 @@ const CourseCard = ({ course }) => {
                         <FaStar></FaStar>
                         <p className='text-md'>{rating.number}</p>
                     </div>
-
-
-
                     <Link to={`/courses/${id}`}> <p className='text-white  flex items-center gap-2 hover:text-green-400'>See details <FaArrowRight></FaArrowRight></p></Link>
                 </button>
             </div>

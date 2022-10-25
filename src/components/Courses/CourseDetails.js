@@ -48,8 +48,10 @@ const CourseDetails = () => {
             </button>
             <img className='w-[100%]' src={image_url} alt="Shoes" />
             <div className="card-body items-center text-start mb-3 text-white">
-                <p className='text-2xl'>Course Description</p>
-                <p className='text-md'>{details}</p>
+                <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
+                    <p className='text-2xl text-slate-200'>Course Description</p>
+                </button>
+                <p className='text-md py-4'>{details}</p>
             </div>
 
         </div>
