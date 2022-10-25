@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
     return (
         <div className='px-5 lg:px-20  py-10  flex flex-col items-center '>
-            <form className="p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
+            <form className="p-7 lg:p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Login with your site account</p>
                 <div className="form-control">
                     <label className="label">
@@ -31,7 +31,7 @@ const Login = () => {
                         </>}</label>
                     </div>
                     <div >
-                        <label htmlFor="my-modal-3" className="cursor-pointer underline text-orange-500 ">Reset Password</label>
+                        <label htmlFor="my-modal-3" className="cursor-pointer underline text-green-500 ">Reset Password</label>
                     </div>
 
                 </div>
@@ -40,7 +40,7 @@ const Login = () => {
                 </div>
                 <div className='text-center'>
                     <small className='mr-2'>New to edu-Cate?</small>
-                    <Link to='/register' className="label-text-alt link link-hover text-orange-400">Register Now</Link>
+                    <Link to='/register' className="label-text-alt link link-hover text-green-500">Register Now</Link>
                 </div>
             </form>
             <div className='mb-3 mt-3'>

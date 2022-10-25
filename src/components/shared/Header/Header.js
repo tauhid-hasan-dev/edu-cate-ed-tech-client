@@ -30,7 +30,7 @@ const Header = () => {
                         }>FAQ</NavLink>
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-3xl  lg:text-4xl text-green-500 font-bold ">
+                <Link to="/" className="normal-case text-2xl  lg:text-4xl text-green-500 font-bold ">
                     edu-Cate</Link>
             </div>
             <div className=" navbar-center hidden lg:flex h-16 w-16 ">
@@ -59,8 +59,9 @@ const Header = () => {
                         isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                     }>FAQ</NavLink>
                 </ul>
-                <Link to='/login' className='pl-7'><button className="btn btn- btn-success">Login</button></Link>
+
             </div>
+            <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
         </div>
     );
 };
