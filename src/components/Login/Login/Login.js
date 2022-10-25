@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
-        <div className='px-20  py-10  flex flex-col items-center '>
-            <form className="p-10  border  w-[450px] " >
+        <div className='px-5 lg:px-20  py-10  flex flex-col items-center '>
+            <form className="p-10  border-2 border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Login with your site account</p>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                    <input type="email" name='email' placeholder="email" className="input input-bordered " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -47,8 +47,8 @@ const Login = () => {
                 Log in with one of the following
             </div>
             <div className='flex flex-row justify-center gap-3 mb-5 w-[25%]'>
-                <button className="btn btn-outline rounded btn-warning flex gap-2"><FaGoogle />Google </button>
-                <button className="btn btn-outline rounded flex gap-2 "><FaGithub /> Github</button>
+                <button className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
+                <button className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
             </div>
 
             {/*  {
