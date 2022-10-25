@@ -6,6 +6,7 @@ import Faq from "../../components/Faq/Faq";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login/Login";
 import Register from "../../components/Login/Register/Register";
+import Terms from "../../components/Other/Terms/Terms";
 import Main from "../../layouts/Main/Main";
 
 
@@ -47,7 +48,13 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/terms',
+                element: <Terms></Terms>
             }
         ]
     }
 ])
+
+

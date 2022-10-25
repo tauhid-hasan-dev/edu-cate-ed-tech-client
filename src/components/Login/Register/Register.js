@@ -55,7 +55,7 @@ const Register = () => {
                 </div>
             </form>
             <div className='mb-3 mt-3'>
-                Log in with one of the following
+                Register with one of the following
             </div>
             <div className='flex flex-row justify-center gap-3 mb-5 w-[25%]'>
                 <button className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
