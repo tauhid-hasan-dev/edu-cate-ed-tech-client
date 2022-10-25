@@ -5,13 +5,12 @@ const CourseCard = ({ course }) => {
     const { title, id, total_student, price, instructor, thumbnail_url, rating } = course;
     return (
 
-        <div className="card rounded-md card-compact bg-gray-800 border-2 border-green-500 items-center ">
+        <div className="cursor-pointer card rounded-md card-compact bg-gray-800 border-2 border-green-500 items-center ">
             <figure><img src={thumbnail_url} alt="Shoes" /></figure>
             <div className='flex flex-col items-center'>
                 <img className='mt-5 mb-2 w-16 h-16 text-center rounded-full border-4 border-white ' src={instructor?.img} alt="" />
                 <p className='text-slate-500'>{instructor.name}</p>
             </div>
-
             <div className="card-body items-center">
                 <h2 className="card-title text-white">{title}</h2>
             </div>

@@ -4,7 +4,6 @@ import CourseCard from '../Courses/CourseCard';
 
 const CourseContent = () => {
     const courses = useLoaderData();
-    console.log(courses);
     return (
         <div className='grid grid-cols-3 gap-8 '>
 
