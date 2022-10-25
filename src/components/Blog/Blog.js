@@ -50,6 +50,55 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+
+            <div className='px-5 lg:px-28 py-10'>
+                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                    <div className="card-body items-center text-center m-5 ">
+                        <div className='flex items-center gap-10'>
+                            <h2 className="card-title text-white text-4xl ">How does the private route work?</h2>
+                        </div>
+                    </div>
+                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
+                        <div className='flex gap-5'>
+                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
+                            </div>
+                        </div>
+                    </button>
+                    <div className="card-body items-center text-start mb-3 text-white">
+                        <p className='text-lg py-4 text-slate-300'>
+                            The react private route component renders child components (children) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.
+                            PrivateRoute component is the blueprint for all private routes in the application. If the user is logged in, go on and display the component in question; otherwise, redirect the user to sign-in page. Additionally, we can define the logic of isLogin utility function separately in utils folder.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='px-5 lg:px-28 py-10'>
+                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                    <div className="card-body items-center text-center m-5 ">
+                        <div className='flex items-center gap-10'>
+                            <h2 className="card-title text-white text-4xl ">What is Node? How does Node work?</h2>
+                        </div>
+                    </div>
+                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
+                        <div className='flex gap-5'>
+                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
+                            </div>
+                        </div>
+                    </button>
+                    <div className="card-body items-center text-start mb-3 text-white">
+                        <p className='text-lg py-4 text-slate-300'>
+                            Node.js is a JavaScript runtime environment. Sounds great, but what does that mean? How does that work?The Node.js run-time environment includes everything you need to execute a program written in JavaScript.Node.js came into existence when the original developers of JavaScript extended it from something you could only run in the browser to something you could run on your machine as a standalone application.
+
+                            Now you can do much more with JavaScript than just making websites interactive.
+
+                            JavaScript now has the capability to do things that other scripting languages like Python can do.
+
+                            Both your browser JavaScript and Node.js run on the V8 JavaScript runtime engine. This engine takes your JavaScript code and converts it into a faster machine code. Machine code is low-level code which the computer can run without needing to first interpret it.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
