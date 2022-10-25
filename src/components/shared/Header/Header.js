@@ -62,6 +62,7 @@ const Header = () => {
 
             </div>
             <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
+
         </div>
     );
 };

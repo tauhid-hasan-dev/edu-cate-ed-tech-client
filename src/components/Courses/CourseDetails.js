@@ -53,12 +53,12 @@ const CourseDetails = () => {
                 </button>
                 <p className='text-lg py-4 text-slate-300'>{details}</p>
             </div>
-            <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
+            <div className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                 <div className='text-green-400 text-3xl font-semibold'>
                     <p>{price}</p>
                 </div>
-                <Link to={`/courses/checkout/${id}`} className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success font-semibold">Get premium access</button></Link>
-            </button>
+                <Link to={`/checkout/${id}`} className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success font-semibold">Get premium access</button></Link>
+            </div>
 
         </div>
     );

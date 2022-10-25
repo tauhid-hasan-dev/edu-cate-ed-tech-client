@@ -7,6 +7,7 @@ import Faq from "../../components/Faq/Faq";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login/Login";
 import Register from "../../components/Login/Register/Register";
+import Checkout from "../../components/Other/Checkout/Checkout";
 import Terms from "../../components/Other/Terms/Terms";
 import Main from "../../layouts/Main/Main";
 
@@ -60,6 +61,12 @@ export const router = createBrowserRouter([
             {
                 path: '/terms',
                 element: <Terms></Terms>
+            },
+            {
+                path: '/checkout/:id',
+                element: <Checkout></Checkout>,
+                loader: ({ params }) =>
+                    fetch(`https://b610-lerning-platform-server-side.vercel.app/courses/${params.id}`),
             }
         ]
     }
