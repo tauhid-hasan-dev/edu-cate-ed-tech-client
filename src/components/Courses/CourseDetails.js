@@ -51,7 +51,7 @@ const CourseDetails = () => {
                 <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                     <p className='text-2xl text-slate-200'>Course Description</p>
                 </button>
-                <p className='text-md py-4'>{details}</p>
+                <p className='text-lg py-4 text-slate-300'>{details}</p>
             </div>
             <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                 <div className='text-green-400 text-3xl font-semibold'>
