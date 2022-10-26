@@ -3,10 +3,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../../contexts/AuthProvider';
 import toast from 'react-hot-toast';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     const nevigate = useNavigate();
+    const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider();
 
     const handleSignIn = (event) => {
         event.preventDefault();
@@ -21,6 +24,36 @@ const Login = () => {
                 nevigate('/')
                 toast.success('Login Successful')
                 console.log(user);
+            })
+            .catch(e => {
+                console.error(e);
+                toast.error(e.message)
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                nevigate('/')
+                toast.success('You are logged in!')
+                console.log(user);
+
+            })
+            .catch(e => {
+                console.error(e);
+                toast.error(e.message)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        gitHubSignIn(gitHubProvider)
+            .then(result => {
+                const user = result.user;
+                nevigate('/')
+                toast.success('You are logged in!')
+                console.log(user);
+
             })
             .catch(e => {
                 console.error(e);
@@ -75,8 +108,8 @@ const Login = () => {
                 Log in with one of the following
             </div>
             <div className='flex flex-row justify-center gap-3 mb-5 w-[25%]'>
-                <button className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
-                <button className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
+                <button onClick={handleGithubSignIn} className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
             </div>
 
             {/*  {

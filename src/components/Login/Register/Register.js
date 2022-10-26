@@ -52,7 +52,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 nevigate('/')
-                toast.success('You are registerd! Please verify your mail')
+                toast.success('You are logged in!')
                 console.log(user);
 
             })
@@ -67,7 +67,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 nevigate('/')
-                toast.success('You are registerd! Please verify your mail')
+                toast.success('You are logged in!')
                 console.log(user);
 
             })
