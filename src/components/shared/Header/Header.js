@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    /* console.log(user); */
+    console.log(user);
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -75,7 +75,9 @@ const Header = () => {
             <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
 
             <Link to='/login' className='pl-20 lg:pl-10'><button onClick={handleLogOut} className="btn  btn-sm lg:btn-md btn-error">LogOut</button></Link>
-            <p className='text-white'>{user?.email} </p>
+            <p className='text-white'>{user?.displayName} </p>
+
+            
 
         </div>
     );

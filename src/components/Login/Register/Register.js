@@ -5,10 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
 
-
-
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     const nevigate = useNavigate();
 
 
@@ -21,10 +19,10 @@ const Register = () => {
         const password = form.password.value;
         console.log(name, email, photoURL, password);
 
-
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                updateUserProfile(name, photoURL)
                 nevigate('/')
                 toast.success('You are registerd! Please verify your mail')
                 console.log(user);
@@ -34,6 +32,16 @@ const Register = () => {
                 console.error(e);
                 toast.error(e.message)
             })
+    }
+
+    const updateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUser(profile)
+            .then(() => { })
+            .catch(e => console.log(e))
     }
 
     return (
