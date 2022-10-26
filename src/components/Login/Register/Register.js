@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
@@ -6,8 +7,9 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 
 const Register = () => {
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
     const nevigate = useNavigate();
+    const googleProvider = new GoogleAuthProvider()
 
 
     const handleSignUp = (event) => {
@@ -42,6 +44,21 @@ const Register = () => {
         updateUser(profile)
             .then(() => { })
             .catch(e => console.log(e))
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                nevigate('/')
+                toast.success('You are registerd! Please verify your mail')
+                console.log(user);
+
+            })
+            .catch(e => {
+                console.error(e);
+                toast.error(e.message)
+            })
     }
 
     return (
@@ -99,7 +116,7 @@ const Register = () => {
                 Register with one of the following
             </div>
             <div className='flex flex-row justify-center gap-3 mb-5 w-[25%]'>
-                <button className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
+                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
                 <button className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
             </div>
 
