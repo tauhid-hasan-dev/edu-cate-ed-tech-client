@@ -81,11 +81,11 @@ const Header = () => {
                 user?.uid ?
                     <>
                         <img title={user?.displayName} className='border-2 border-green-600 ml-1 lg:ml-8 w-8 h-8 lg:w-14 lg:h-14 rounded-full' src={user?.photoURL} alt="" />
-                        <Link to='/login' className='pl-8 lg:pl-8'><button onClick={handleLogOut} className="btn  btn-sm lg:btn-md rounded btn-error">LogOut</button></Link>
+                        <Link to='/login' className='pl-2 lg:pl-8'><button onClick={handleLogOut} className="btn  btn-sm lg:btn-sm rounded btn-error">LogOut</button></Link>
                     </> :
-                    <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
+                    <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-sm btn-success">Login</button></Link>
             }
-            <div onClick={handleToggle} className={`text-4xl ml-8 ${toggle ? "text-white" : "text-slate-500"}`}>
+            <div onClick={handleToggle} className={`text-4xl ml-2 lg:ml-8 ${toggle ? "text-white" : "text-slate-500"}`}>
                 {toggle ? <FaToggleOn></FaToggleOn> : <FaToggleOff></FaToggleOff>}
             </div>
         </div >
