@@ -15,7 +15,7 @@ const CourseDetails = () => {
             <div className="card-body items-center text-center m-5 border-b border-slate-600">
                 <div className='flex items-center gap-5  lg:gap-10'>
                     <h2 className="card-title text-white text-2xl lg:text-4xl">{title}</h2>
-                    <Pdf targetRef={ref} filename="code-example.pdf">
+                    <Pdf targetRef={ref} filename="course-details.pdf">
                         {({ toPdf }) => <button onClick={toPdf}> <div className='text-white text-3xl'>
                             <FaFileDownload></FaFileDownload>
                         </div></button>}
@@ -23,7 +23,7 @@ const CourseDetails = () => {
                 </div>
             </div>
             <div ref={ref} className='text-slate-300 pb-5 text-center '>
-                <p className='font-bold text-white'>Course Summery</p>
+                <p className='font-bold text-white'>Course Details</p>
                 <p>Course Name: <span className='text-green-500'>{title}</span></p>
                 <p>Course Instructor: <span className='text-green-500'>{instructor.name}</span></p>
                 <p>Course Rating: <span className='text-green-500'>{rating.number}</span></p>
