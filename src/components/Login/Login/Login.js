@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../../contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -18,14 +19,16 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 nevigate('/')
+                toast.success('Login Successful')
                 console.log(user);
             })
             .catch(e => {
                 console.error(e);
+                toast.error(e.message)
             })
     }
 
-    
+
 
     return (
         <div className='px-5 lg:px-20  py-10  flex flex-col items-center bg-gray-800 text-slate-300'>
@@ -62,7 +65,7 @@ const Login = () => {
                 <div className="form-control mt-6">
                     <button className="btn  text-black border-btn-color hover:bg-green-500 hover:border-green-500 bg-green-400 border-green-400">Login</button>
                 </div>
-                
+
                 <div className='text-center'>
                     <small className='mr-2'>New to edu-Cate?</small>
                     <Link to='/register' className="label-text-alt link link-hover text-green-500">Register Now</Link>

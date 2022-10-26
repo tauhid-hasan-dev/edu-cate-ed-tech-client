@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
 
@@ -9,7 +9,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
-
+    const nevigate = useNavigate();
 
 
     const handleSignUp = (event) => {
@@ -21,14 +21,18 @@ const Register = () => {
         const password = form.password.value;
         console.log(name, email, photoURL, password);
 
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                nevigate('/')
+                toast.success('You are registerd! Please verify your mail')
                 console.log(user);
 
             })
             .catch(e => {
                 console.error(e);
+                toast.error(e.message)
             })
     }
 
