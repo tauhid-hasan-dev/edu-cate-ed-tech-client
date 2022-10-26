@@ -10,7 +10,7 @@ const CourseDetails = () => {
     return (
         <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
             <div className="card-body items-center text-center m-5 ">
-                <div className='flex items-center gap-10'>
+                <div className='flex items-center gap-5  lg:gap-10'>
                     <h2 className="card-title text-white text-2xl lg:text-4xl">{title}</h2>
                     <div className='text-white text-3xl'>
                         <FaFileDownload></FaFileDownload>
@@ -51,7 +51,7 @@ const CourseDetails = () => {
                 <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                     <p className='text-2xl text-slate-200'>Course Description</p>
                 </button>
-                <p className='text-lg py-4 text-slate-300'>{details}</p>
+                <p className='text-md lg:text-lg py-4 text-slate-300'>{details}</p>
             </div>
             <div className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                 <div className='text-green-400 text-3xl font-semibold'>
