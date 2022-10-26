@@ -44,8 +44,8 @@ const Header = () => {
                 </div>
                 <Link to="/" className="normal-case text-2xl  lg:text-4xl text-green-500 font-bold ">
                     <div className='flex  items-center gap-2'>
-                        <FaGg></FaGg>
-                        edu-Cate</div></Link>
+                        <FaGg className='text-4xl lg:text-6xl'></FaGg>
+                        <span className='hidden lg:block'>edu-Cate</span></div></Link>
             </div>
             <div className=" navbar-center hidden lg:flex h-16 w-16 ">
                 {/*  <FontAwesomeIcon icon={faBurger} /> */}
@@ -75,6 +75,7 @@ const Header = () => {
                 </ul>
 
             </div>
+
 
             {
                 user?.uid ?

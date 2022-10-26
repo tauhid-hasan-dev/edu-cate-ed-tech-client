@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFileDownload, FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import { FaFileDownload, } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
@@ -11,14 +11,14 @@ const CourseDetails = () => {
         <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
             <div className="card-body items-center text-center m-5 ">
                 <div className='flex items-center gap-10'>
-                    <h2 className="card-title text-white text-4xl">{title}</h2>
+                    <h2 className="card-title text-white text-2xl lg:text-4xl">{title}</h2>
                     <div className='text-white text-3xl'>
                         <FaFileDownload></FaFileDownload>
                     </div>
                 </div>
             </div>
             <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
-                <div className='flex gap-5'>
+                <div className='flex lg:flex-row flex-col gap-5'>
                     <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
                         <img className=' w-14 h-14 text-center rounded-full border-4 border-white ' src={instructor?.img} alt="" />
                         <div className='flex flex-col text-start'>
@@ -57,7 +57,7 @@ const CourseDetails = () => {
                 <div className='text-green-400 text-3xl font-semibold'>
                     <p>{price}</p>
                 </div>
-                <Link to={`/checkout/${id}`} className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success font-semibold">Get premium access</button></Link>
+                <Link to={`/checkout/${id}`} className='pl-10  lg:pl-10'><button className="btn  btn-md  btn-success font-semibold ">Get premium access</button></Link>
             </div>
         </div>
     );
