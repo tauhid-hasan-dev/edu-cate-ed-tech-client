@@ -1,15 +1,18 @@
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../../contexts/AuthProvider';
 import toast from 'react-hot-toast';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+    const { user, signIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     const nevigate = useNavigate();
+    let location = useLocation();
     const googleProvider = new GoogleAuthProvider();
     const gitHubProvider = new GithubAuthProvider();
+
+    let from = location.state?.from?.pathname || "/";
 
     const handleSignIn = (event) => {
         event.preventDefault();
@@ -21,7 +24,9 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                nevigate('/')
+                if (user && user.uid) {
+                    nevigate(from, { replace: true });
+                }
                 toast.success('Login Successful')
                 console.log(user);
             })
@@ -35,7 +40,9 @@ const Login = () => {
         googleSignIn(googleProvider)
             .then(result => {
                 const user = result.user;
-                nevigate('/')
+                if (user && user.uid) {
+                    nevigate(from, { replace: true });
+                }
                 toast.success('You are logged in!')
                 console.log(user);
 
@@ -50,7 +57,9 @@ const Login = () => {
         gitHubSignIn(gitHubProvider)
             .then(result => {
                 const user = result.user;
-                nevigate('/')
+                if (user && user.uid) {
+                    nevigate(from, { replace: true });
+                }
                 toast.success('You are logged in!')
                 console.log(user);
 
@@ -60,6 +69,12 @@ const Login = () => {
                 toast.error(e.message)
             })
     }
+
+    useEffect(() => {
+        if (user && user.uid) {
+            nevigate(from, { replace: true });
+        }
+    }, [user])
 
 
 

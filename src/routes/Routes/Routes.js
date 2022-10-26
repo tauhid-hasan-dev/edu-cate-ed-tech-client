@@ -12,6 +12,7 @@ import ErrorElement from "../../components/Other/ErrorElement/ErrorElement";
 import NotFound from "../../components/Other/NotFound/NotFound";
 import Terms from "../../components/Other/Terms/Terms";
 import Main from "../../layouts/Main/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -67,7 +68,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <Checkout></Checkout>,
+                element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
                 loader: ({ params }) =>
                     fetch(`https://b610-lerning-platform-server-side.vercel.app/courses/${params.id}`),
             }
