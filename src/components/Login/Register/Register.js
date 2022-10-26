@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
@@ -7,9 +7,10 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 
 const Register = () => {
-    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     const nevigate = useNavigate();
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider();
 
 
     const handleSignUp = (event) => {
@@ -48,6 +49,21 @@ const Register = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                nevigate('/')
+                toast.success('You are registerd! Please verify your mail')
+                console.log(user);
+
+            })
+            .catch(e => {
+                console.error(e);
+                toast.error(e.message)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        gitHubSignIn(gitHubProvider)
             .then(result => {
                 const user = result.user;
                 nevigate('/')
@@ -117,7 +133,7 @@ const Register = () => {
             </div>
             <div className='flex flex-row justify-center gap-3 mb-5 w-[25%]'>
                 <button onClick={handleGoogleSignIn} className="btn btn-outline btn-success rounded  flex gap-2"><FaGoogle />Google </button>
-                <button className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
+                <button onClick={handleGithubSignIn} className="btn btn-outline btn-success rounded flex gap-2 "><FaGithub /> Github</button>
             </div>
 
             {/*  {
