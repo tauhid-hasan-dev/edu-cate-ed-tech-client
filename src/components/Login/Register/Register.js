@@ -71,7 +71,7 @@ const Register = () => {
                     </>}</label>
                 </div>
                 <div className="form-control mt-6">
-                    <button type='submit' className="btn  text-black border-btn-color hover:bg-green-500 hover:border-green-500 bg-green-400 border-green-400">Login</button>
+                    <button type='submit' className="btn  text-black border-btn-color hover:bg-green-500 hover:border-green-500 bg-green-400 border-green-400">Register</button>
                 </div>
                 <div className="text-center">
                     <small className="mr-2">Already have an account?</small>

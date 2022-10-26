@@ -1,23 +1,45 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+
+    const handleSignIn = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+            })
+            .catch(e => {
+                console.error(e);
+            })
+
+    }
+
     return (
         <div className='px-5 lg:px-20  py-10  flex flex-col items-center bg-gray-800 text-slate-300'>
-            <form className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
+            <form onSubmit={handleSignIn} className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Login with your site account</p>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-slate-300">Email</span>
                     </label>
-                    <input type="email" name='email' placeholder="email" className="input input-bordered " required />
+                    <input type="email" name='email' placeholder="email" className="input input-bordered text-green-700 font-semibold " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-slate-300">Password</span>
                     </label>
-                    <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                    <input type="password" name='password' placeholder="password" className="input input-bordered text-green-700 font-semibold" required />
 
                 </div>
                 <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
