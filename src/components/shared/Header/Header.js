@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FaGg } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
@@ -42,7 +43,9 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to="/" className="normal-case text-2xl  lg:text-4xl text-green-500 font-bold ">
-                    edu-Cate</Link>
+                    <div className='flex  items-center gap-2'>
+                        <FaGg></FaGg>
+                        edu-Cate</div></Link>
             </div>
             <div className=" navbar-center hidden lg:flex h-16 w-16 ">
                 {/*  <FontAwesomeIcon icon={faBurger} /> */}
