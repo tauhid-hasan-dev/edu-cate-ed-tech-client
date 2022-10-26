@@ -8,6 +8,9 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [toggle, setToggle] = useState(false);
+
+
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
@@ -46,7 +49,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const value = { user, createUser, signIn, logOut, updateUser, googleSignIn, gitHubSignIn, loading }
+    const value = { user, createUser, signIn, logOut, updateUser, googleSignIn, gitHubSignIn, loading, toggle, setToggle }
 
     return (
         <AuthContext.Provider value={value} >

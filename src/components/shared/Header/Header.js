@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
-import { FaGg } from 'react-icons/fa';
+import React, { useContext, useState } from 'react';
+import { FaGg, FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, toggle, setToggle } = useContext(AuthContext);
+    const handleToggle = () => {
+        setToggle(!toggle)
+    }
 
     const handleLogOut = () => {
         logOut()
@@ -15,7 +18,7 @@ const Header = () => {
     }
 
     return (
-        <div className="navbar bg-black  border-b border-slate-800 shadow-md px-5  lg:px-28 py-5 ">
+        <div className={`navbar bg-black  border-b border-slate-800 shadow-md px-5  lg:px-28 py-5 $`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">
@@ -47,11 +50,7 @@ const Header = () => {
                         <FaGg className='text-4xl lg:text-6xl'></FaGg>
                         <span className='hidden lg:block'>edu-Cate</span></div></Link>
             </div>
-            <div className=" navbar-center hidden lg:flex h-16 w-16 ">
-                {/*  <FontAwesomeIcon icon={faBurger} /> */}
-                <img src='' alt="" />
 
-            </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0 text-slate-100 gap-10 text-lg ">
                     <NavLink
@@ -72,6 +71,7 @@ const Header = () => {
                     <NavLink to='/faq' className={({ isActive }) =>
                         isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
                     }>FAQ</NavLink>
+
                 </ul>
 
             </div>
@@ -85,9 +85,10 @@ const Header = () => {
                     </> :
                     <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
             }
-
-
-        </div>
+            <div onClick={handleToggle} className={`text-4xl ml-8 ${toggle ? "text-white" : "text-slate-500"}`}>
+                {toggle ? <FaToggleOn></FaToggleOn> : <FaToggleOff></FaToggleOff>}
+            </div>
+        </div >
     );
 };
 
