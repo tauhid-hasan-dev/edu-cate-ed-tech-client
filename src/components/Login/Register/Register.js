@@ -17,6 +17,15 @@ const Register = () => {
         const photoURL = form.photourl.value;
         const password = form.password.value;
         console.log(name, email, photoURL, password);
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(e => {
+                console.error(e);
+            })
     }
 
     return (
@@ -27,25 +36,25 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text text-slate-300">Full Name</span>
                     </label>
-                    <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-green-400 font-semibold bg-gray-700" required />
+                    <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-green-700 font-semibold " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-slate-300">Photo Url</span>
                     </label>
-                    <input type="text" name='photourl' placeholder="Your Photo Url" className="input input-bordered text-green-400 font-semibold bg-gray-700" required />
+                    <input type="text" name='photourl' placeholder="Your Photo Url" className="input input-bordered text-green-700 font-semibold " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-slate-300">Email</span>
                     </label>
-                    <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-green-400 font-semibold bg-gray-700" required />
+                    <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-green-700 font-semibold " required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-slate-300">Password</span>
                     </label>
-                    <input type="password" name='password' placeholder="Password" className="input input-bordered text-green-400 font-semibold bg-gray-700" required />
+                    <input type="password" name='password' placeholder="Password" className="input input-bordered text-green-700 font-semibold " required />
 
                 </div>
                 <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
