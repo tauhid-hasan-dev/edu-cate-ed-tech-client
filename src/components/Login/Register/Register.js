@@ -78,8 +78,8 @@ const Register = () => {
     }
 
     return (
-        <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300 bg-gray-800'>
-            <form onSubmit={handleSignUp} className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
+        <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300 bg-black'>
+            <form onSubmit={handleSignUp} className="p-7 lg:p-10 bg-slate-800 rounded border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Register</p>
                 <div className="form-control">
                     <label className="label">

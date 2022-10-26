@@ -79,8 +79,8 @@ const Login = () => {
 
 
     return (
-        <div className='px-5 lg:px-20  py-10  flex flex-col items-center bg-gray-800 text-slate-300'>
-            <form onSubmit={handleSignIn} className="p-7 lg:p-10  border rounded border-green-300 w-[350px]   lg:w-[450px] " >
+        <div className='px-5 lg:px-20  py-10  flex flex-col items-center bg-black text-slate-300'>
+            <form onSubmit={handleSignIn} className="p-7 lg:p-10  bg-slate-800  rounded border-green-300 w-[350px]   lg:w-[450px] " >
                 <p className='text-center text-2xl  font-semibold'>Login with your site account</p>
                 <div className="form-control">
                     <label className="label">

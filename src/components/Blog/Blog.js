@@ -3,7 +3,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='bg-gray-700'>
+        <div className='bg-black'>
             <div className='px-5 lg:px-28 py-10'>
                 <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
@@ -11,12 +11,7 @@ const Blog = () => {
                             <h2 className="card-title text-white text-4xl ">What is `cors`?</h2>
                         </div>
                     </div>
-                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
-                        <div className='flex gap-5'>
-                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
-                            </div>
-                        </div>
-                    </button>
+
                     <div className="card-body items-center text-start mb-3 text-white">
                         <p className='text-lg py-4 text-slate-300'>
                             Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
@@ -36,12 +31,7 @@ const Blog = () => {
                             <h2 className="card-title text-white text-4xl ">Why are you using `firebase`? What other options do you have to implement authentication?</h2>
                         </div>
                     </div>
-                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
-                        <div className='flex gap-5'>
-                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
-                            </div>
-                        </div>
-                    </button>
+
                     <div className="card-body items-center text-start mb-3 text-white">
                         <p className='text-lg py-4 text-slate-300'>
                             Firebase was originally developed to be a realtime database, and today that is still one of its key features. The Realtime Database is essentially a cloud-hosted NoSQL database that stores data as JSON (JavaScript Object Notation) in real time. One of the key advantages for Firebase’s Realtime Database is that it works offline by using local cache on the device to store any changes made. When app connectivity is resumed, the data is synced.
@@ -58,12 +48,7 @@ const Blog = () => {
                             <h2 className="card-title text-white text-4xl ">How does the private route work?</h2>
                         </div>
                     </div>
-                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
-                        <div className='flex gap-5'>
-                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
-                            </div>
-                        </div>
-                    </button>
+
                     <div className="card-body items-center text-start mb-3 text-white">
                         <p className='text-lg py-4 text-slate-300'>
                             The react private route component renders child components (children) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.
@@ -80,12 +65,7 @@ const Blog = () => {
                             <h2 className="card-title text-white text-4xl ">What is Node? How does Node work?</h2>
                         </div>
                     </div>
-                    <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
-                        <div className='flex gap-5'>
-                            <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
-                            </div>
-                        </div>
-                    </button>
+
                     <div className="card-body items-center text-start mb-3 text-white">
                         <p className='text-lg py-4 text-slate-300'>
                             Node.js is a JavaScript runtime environment. Sounds great, but what does that mean? How does that work?The Node.js run-time environment includes everything you need to execute a program written in JavaScript.Node.js came into existence when the original developers of JavaScript extended it from something you could only run in the browser to something you could run on your machine as a standalone application.
