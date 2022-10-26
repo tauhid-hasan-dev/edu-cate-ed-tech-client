@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -72,12 +72,16 @@ const Header = () => {
                 </ul>
 
             </div>
-            <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
 
-            <Link to='/login' className='pl-20 lg:pl-10'><button onClick={handleLogOut} className="btn  btn-sm lg:btn-md btn-error">LogOut</button></Link>
-            <p className='text-white'>{user?.displayName} </p>
+            {
+                user?.uid ?
+                    <>
+                        <img title={user?.displayName} className='ml-1 lg:ml-5 w-8 h-8 lg:w-14 lg:h-14 rounded-full' src={user?.photoURL} alt="" />
+                        <Link to='/login' className='pl-8 lg:pl-5'><button onClick={handleLogOut} className="btn  btn-sm lg:btn-md rounded btn-error">LogOut</button></Link>
+                    </> :
+                    <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
+            }
 
-            
 
         </div>
     );
