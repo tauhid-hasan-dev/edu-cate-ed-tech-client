@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
 
-const Register = () => {
 
+
+const Register = () => {
     const { createUser } = useContext(AuthContext);
-    console.log(createUser);
+
+
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -21,7 +24,8 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                console.log(user);
+
             })
             .catch(e => {
                 console.error(e);

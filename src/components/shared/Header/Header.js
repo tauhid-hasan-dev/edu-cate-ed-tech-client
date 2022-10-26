@@ -4,6 +4,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
     const { user } = useContext(AuthContext);
+    console.log(user);
 
     return (
         <div className="navbar bg-black  border-b border-slate-800 shadow-md px-5  lg:px-28 py-5 ">
@@ -65,7 +66,7 @@ const Header = () => {
 
             </div>
             <Link to='/login' className='pl-20 lg:pl-10'><button className="btn  btn-sm lg:btn-md btn-success">Login</button></Link>
-            <p className='text-white'>{user?.displayName} </p>
+            <p className='text-white'>{user?.email} </p>
 
         </div>
     );
