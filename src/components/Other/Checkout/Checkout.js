@@ -62,12 +62,6 @@ const Checkout = () => {
                         </div>
                     </form>
                 </div >
-
-
-
-
-
-
             </div>
         </div>
     );

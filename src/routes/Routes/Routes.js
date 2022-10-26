@@ -35,13 +35,11 @@ export const router = createBrowserRouter([
                     {
                         path: '/courses/',
                         element: <CourseContent></CourseContent>,
-                        /* errorElement: <ErrorElement></ErrorElement>, */
                         loader: () => fetch('https://b610-lerning-platform-server-side.vercel.app/courses')
                     },
                     {
                         path: '/courses/:id',
                         element: <CourseDetails></CourseDetails>,
-                        /*  errorElement: <ErrorElement></ErrorElement>, */
                         loader: ({ params }) =>
                             fetch(`https://b610-lerning-platform-server-side.vercel.app/courses/${params.id}`),
                     }
