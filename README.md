@@ -1,6 +1,7 @@
 # edu-Cate (A ed-tech single page web app)
 
 ### Live website : https://learning-platform-client-d552c.web.app/
+### server: https://b610-lerning-platform-server-side.vercel.app/
 
 ## Some of the important feature of this project
 
