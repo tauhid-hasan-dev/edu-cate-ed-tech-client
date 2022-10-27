@@ -28,7 +28,7 @@ const Faq = () => {
                     </div>
 
                     <div className="card-body items-center text-start mb-3 text-white">
-                        <p className='text-2xl py-4 ttext-green-500'>
+                        <p className='text-2xl py-4 text-green-500'>
                             Yes. Apply with your valid edu email id to apply. We will reach you within 72 hours.
                         </p>
                     </div>

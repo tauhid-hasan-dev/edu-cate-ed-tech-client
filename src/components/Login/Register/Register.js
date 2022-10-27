@@ -27,7 +27,7 @@ const Register = () => {
                 const user = result.user;
                 updateUserProfile(name, photoURL)
                 nevigate('/')
-                toast.success('You are registerd! Please verify your mail')
+                toast.success('You are registerd!')
                 console.log(user);
 
             })
