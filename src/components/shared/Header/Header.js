@@ -1,7 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FaGg, FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+
 
 const Header = () => {
     const { user, logOut, toggle, setToggle } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const Header = () => {
     }
 
     return (
-        <div className={`navbar bg-black shadow-md px-5  lg:px-28 py-5 $`}>
+        <div className={`navbar bg-black shadow-md px-5 border-b border-slate-900 lg:px-28 py-5 $`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">
