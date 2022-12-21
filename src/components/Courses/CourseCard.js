@@ -7,7 +7,7 @@ const CourseCard = ({ course }) => {
     return (
         <>
             <Link to={`/courses/${id}`}>
-                <div className="items-stretch cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 h-[420px] shadow-green-500">
+                <div className="items-stretch cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  border-green-500 h-[420px] shadow-green-500">
                     <figure><img src={thumbnail_url} alt="Shoes" /></figure>
                     <div className='flex flex-col items-center'>
                         <img className='mt-5 mb-2 w-16 h-16 text-center rounded-full border-4 border-white ' src={instructor?.img} alt="" />

@@ -11,7 +11,7 @@ const CourseDetails = () => {
     console.log(singleCourse);
 
     return (
-        <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+        <div className="cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 border-green-500 items-center ">
             <div className="card-body items-center text-center m-5 border-b border-slate-600">
                 <div className='flex items-center gap-5  lg:gap-10'>
                     <h2 className="card-title text-white text-2xl lg:text-4xl">{title}</h2>
@@ -32,7 +32,7 @@ const CourseDetails = () => {
             </div>
 
 
-            <button className="bg-btn-color bg-gray-900 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
+            <button className="bg-btn-color bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 text-black py-5 px-4  rounded-b  bottom-0 w-full flex justify-between items-center gap-3">
                 <div className='flex lg:flex-row flex-col gap-5'>
                     <div className='flex  items-center justify-between gap-3 border-r pr-5 border-slate-600'>
                         <img className=' w-14 h-14 text-center rounded-full border-4 border-white ' src={instructor?.img} alt="" />
@@ -63,14 +63,14 @@ const CourseDetails = () => {
             </button>
             <img className='w-[100%]' src={image_url} alt="Shoes" />
             <div className="card-body items-center text-start mb-3 text-white">
-                <button className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
+                <button className="bg-btn-color bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                     <p className='text-2xl text-slate-200'>Course Description</p>
                 </button>
                 <p className='text-md lg:text-lg py-4 text-slate-300'>{details}</p>
             </div>
 
 
-            <div className="bg-btn-color bg-gray-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
+            <div className="bg-btn-color bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-black py-3 px-4 rounded-b  bottom-0 w-full flex justify-between items-center  gap-3">
                 <div className='text-green-400 text-3xl font-semibold'>
                     <p>{price}</p>
                 </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className=''>
-            <footer className="footer p-10 bg-black  text-slate-300 border-t border-slate-900 px-5  lg:px-28 ">
+            <footer className="footer p-10 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900  text-slate-300  border-slate-800 px-5  lg:px-28 ">
                 <div>
                     <span className="footer-title">Services</span>
                     <a href='/' className="link link-hover">Branding</a>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a href='/' className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer px-28 py-4 border-t border-slate-800 bg-black  text-slate-300  ">
+            <footer className="footer px-28 py-4  border-slate-800 bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 text-slate-300  ">
                 <div className="items-center grid-flow-col">
                     <div>
                         <p>Copyright © 2022 - All right reserved by edu-Cate Ltd</p>

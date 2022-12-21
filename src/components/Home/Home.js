@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import bg from '../../images/bb.svg'
 
 const Home = () => {
+
     return (
-        <div className='bg-black flex flex-col lg:flex-row gap-20 lg:px-28 lg:py-20 px-10 py-32'>
+        <div className='bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900   flex flex-col lg:flex-row gap-20 lg:px-28 lg:py-20 px-10 py-32 ' >
             <div className='flex flex-col items-center lg:items-start gap-5 order-1 lg:order-0 '>
                 <div className='flex flex-col gap-5 justify-center text-center lg:text-start'>
                     <h1 className='text-white text-3xl lg:text-5xl font-bold'>We teach Web Development</h1>

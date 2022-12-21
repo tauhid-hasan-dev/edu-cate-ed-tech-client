@@ -3,9 +3,9 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='bg-black'>
+        <div className='bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>
             <div className='px-5 lg:px-28 py-10'>
-                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                <div className="cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
                         <div className='flex items-center gap-10'>
                             <h2 className="card-title text-white text-4xl ">What is `cors`?</h2>
@@ -25,7 +25,7 @@ const Blog = () => {
             </div>
 
             <div className='px-5 lg:px-28 py-10'>
-                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                <div className="cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
                         <div className='flex items-center gap-10'>
                             <h2 className="card-title text-white text-4xl ">Why are you using `firebase`? What other options do you have to implement authentication?</h2>
@@ -42,7 +42,7 @@ const Blog = () => {
             </div>
 
             <div className='px-5 lg:px-28 py-10'>
-                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                <div className="cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
                         <div className='flex items-center gap-10'>
                             <h2 className="card-title text-white text-4xl ">How does the private route work?</h2>
@@ -59,7 +59,7 @@ const Blog = () => {
             </div>
 
             <div className='px-5 lg:px-28 py-10'>
-                <div className="cursor-pointer card rounded-md card-compact bg-gray-800  border-green-500 items-center ">
+                <div className="cursor-pointer card rounded-md card-compact bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  border-green-500 items-center ">
                     <div className="card-body items-center text-center m-5 ">
                         <div className='flex items-center gap-10'>
                             <h2 className="card-title text-white text-4xl ">What is Node? How does Node work?</h2>

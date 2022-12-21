@@ -19,7 +19,7 @@ const Header = () => {
     }
 
     return (
-        <div className={`navbar bg-black shadow-md px-5 border-b border-slate-900 lg:px-28 py-5 $`}>
+        <div className={`navbar bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-md px-5  lg:px-28 py-5 $`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">
